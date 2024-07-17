@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import css from './ContactForm.module.css';
+<<<<<<< HEAD
 import { addContact } from 'redux/slices/contact';
 import { getContacts } from 'redux/selectors';
+=======
+import { addContact } from 'redux/slices/contacs';
+import { getContacts } from 'redux/selector';
+>>>>>>> 4a8ec04a55786df5cd6d064e3e9a84d64228bb7d
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
