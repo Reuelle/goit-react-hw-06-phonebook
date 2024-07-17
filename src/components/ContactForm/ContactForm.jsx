@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import css from './ContactForm.module.css';
-import { addContact } from 'redux/slices/contact';
-import { getContacts } from 'redux/selectors';
-import { addContact } from 'redux/slices/contacs';
+import { addContact } from 'redux/slice/contact';
 import { getContacts } from 'redux/selector';
 
 export const ContactForm = () => {
