@@ -11,7 +11,7 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 20,
-        color: '#010101',
+        color: 'rgb(8, 7, 7)',
         backgroundColor: 'rgb(248, 246, 247)',
         minHeight: '100vh',
         padding: '1rem',
