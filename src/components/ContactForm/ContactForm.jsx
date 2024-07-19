@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import css from './ContactForm.module.css';
 import { addContact } from 'redux/slice/contact';
@@ -5,24 +6,18 @@ import { getContacts } from 'redux/selector';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts); // Ensure this returns an array
+  const contacts = useSelector(getContacts);
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
     const name = form.elements.name.value;
     const number = form.elements.number.value;
-    
-    console.log("Name:", name); // Log name
-    console.log("Number:", number); // Log number
-    
     form.reset();
-
-    if (contacts.some(contact => contact.name === name)) {
+    if (contacts.value.find(contact => contact.name === name)) {
       alert(`${name} is already in contacts`);
       return false;
     }
-    
     dispatch(addContact(name, number));
     return true;
   };
@@ -54,4 +49,8 @@ export const ContactForm = () => {
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  contacts: PropTypes.object,
 };
