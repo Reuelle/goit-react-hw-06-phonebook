@@ -17,7 +17,7 @@ export const Filter = () => {
       <input
         className={css.filterName}
         type="text"
-        placeholder="Enter filter"
+        placeholder="Enter name"
         onChange={handleChange}
         name="name"
         autoComplete="off"
