@@ -1,4 +1,4 @@
-import './App.css'; // Import the CSS file
+import './App.module.css'; // Import the CSS file
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
