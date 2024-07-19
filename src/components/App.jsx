@@ -1,27 +1,26 @@
+import './App.css'; // Import the CSS file
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 
 export const App = () => {
   return (
-    <div
-      style={{
-          display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 20,
-        color: 'rgb(8, 7, 7)',
-        backgroundColor: 'rgb(248, 246, 247)',
-        minHeight: '100vh',
-        padding: '1rem',
-      }}
-    >
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <h2> Contacts</h2>
-      <Filter />
-      <ContactList />
+    <div className="center-container">
+      <div className="phonebook">
+        <div className="wrapper">
+          <h1 className="block">Phonebook</h1>
+          <div className="block">
+            <ContactForm />
+          </div>
+          <h2 className="block">Contacts</h2>
+          <div className="block">
+            <Filter />
+          </div>
+          <div className="block">
+            <ContactList />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
