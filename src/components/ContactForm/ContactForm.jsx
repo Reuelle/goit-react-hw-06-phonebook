@@ -6,7 +6,7 @@ import { getContacts } from 'redux/selector';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(getContacts); // Make sure this returns an array
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -14,7 +14,9 @@ export const ContactForm = () => {
     const name = form.elements.name.value;
     const number = form.elements.number.value;
     form.reset();
-    if (contacts.value.find(contact => contact.name === name)) {
+
+    // Check if contact already exists
+    if (contacts.some(contact => contact.name === name)) {
       alert(`${name} is already in contacts`);
       return false;
     }
@@ -49,4 +51,13 @@ export const ContactForm = () => {
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
