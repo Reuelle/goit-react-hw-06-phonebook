@@ -6,12 +6,15 @@ export const App = () => {
   return (
     <div
       style={{
-        display: 'flex',
+          display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 20,
         color: '#010101',
+        backgroundColor: 'rgb(248, 246, 247)',
+        minHeight: '100vh',
+        padding: '1rem',
       }}
     >
       <h1>Phonebook</h1>
