@@ -1,37 +1,59 @@
-.phonebook {
+.app {
   display: flex;
-  justify-content: center;
-  padding: 15px;
-  text-align: center;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  text-align: center;
-  width: 350px;
-  background: rgb(223, 217, 220);
-  padding: 15px;
-  border-radius: 10px;
-  color: rgb(6, 1, 8);
-}
-
-/* Add this new style to center the elements */
-.center-container {
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full height of the viewport */
-}
-
-.block {
-  margin: 10px 0;
+  font-size: 20px;
+  color: #010101;
+  background: rgb(248, 246, 247); 
+  height: 100vh;  
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: rgba(35, 126, 124, 0.14);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; 
 }
 
+.title {
+  text-align: center;  
+}
+
+.subtitle {
+  text-align: center; 
+}
+
+
+.formLabel {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formName,
+.formNumber {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem auto;
+  align-items: center;
+  font-size: large;
+  text-align: center;  
+  padding: 0.5rem 15rem 0.5rem 1rem;
+}
+
+.formBtn {
+  width: 125px;
+  padding: 6px;
+  background: rgb(218, 215, 219);
+  color: rgb(58, 25, 58);
+  border: inset 0.5px #683838;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: inset 0 0 0 2px #e9d5d5;
+  margin: 0 auto;  
+}
+
+.formBtn:hover {
+  background-color: rgba(23, 26, 32, 1);
+  cursor: pointer;
+}
