@@ -1,26 +1,17 @@
-import './App.module.css'; // Import the CSS file
+import React from 'react';
+import './App.module.css';  // Ensure this path is correct
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 
 export const App = () => {
   return (
-    <div className="center-container">
-      <div className="phonebook">
-        <div className="wrapper">
-          <h1 className="block">Phonebook</h1>
-          <div className="block">
-            <ContactForm />
-          </div>
-          <h2 className="block">Contacts</h2>
-          <div className="block">
-            <Filter />
-          </div>
-          <div className="block">
-            <ContactList />
-          </div>
-        </div>
-      </div>
+    <div className="app">
+      <h1 className="title">Phonebook</h1>
+      <ContactForm />
+      <h2 className="subtitle">Contacts</h2>
+      <Filter />
+      <ContactList />
     </div>
   );
 };
